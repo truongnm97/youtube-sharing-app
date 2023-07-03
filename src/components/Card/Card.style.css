@@ -1,0 +1,90 @@
+.card {
+  border: var(--border);
+  box-shadow: var(--shadow);
+  background-color: var(--white);
+  min-height: 150px;
+  display: flex;
+}
+
+.card iframe {
+  width: 240px;
+  height: 100%;
+}
+
+.card > h2 {
+  font-size: 0.85rem;
+  border-bottom: var(--border);
+  padding: 0.25rem;
+  margin: 0;
+  color: var(--white-light);
+  text-shadow: var(--text-shadow);
+  background-color: var(--red);
+}
+
+.card > h3 {
+  color: var(--gray);
+  text-decoration: underline;
+  font-weight: bold;
+  padding: 0.5rem 0.25rem 0.25rem 0.25rem;
+  margin: 0;
+}
+
+.card > .card-info {
+  padding: 0.25rem;
+  flex: 1;
+}
+
+.blank-block > p,
+.card p {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  padding: 0.25rem 0.25rem;
+}
+
+.blank-block > blockquote,
+.card > blockquote {
+  display: block;
+  font-style: normal;
+  width: fit-content;
+  padding: 0rem 0.25rem;
+  margin: 1rem 0.25rem;
+  color: var(--gray);
+  border-left: 2px solid var(--gray);
+  background-color: var(--gray-lighter);
+  box-sizing: border-box;
+}
+
+.blank-block > blockquote {
+  margin: 1rem 0rem;
+  width: calc(100%);
+}
+
+.card > pre code.hljs {
+  margin: 0.25rem;
+  box-shadow: none;
+}
+
+.blank-block > p:last-child,
+.card p:last-child {
+  margin-bottom: 0rem;
+}
+
+#leadin > p,
+#simple-example {
+  margin: 0;
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    flex-direction: column;
+    min-height: 300px;
+  }
+
+  .card iframe {
+    width: 100%;
+    flex: 1;
+  }
+}

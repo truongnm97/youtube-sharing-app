@@ -1,0 +1,59 @@
+.dialog-backdrop {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 100vw;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.dialog {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  display: none;
+  position: fixed;
+  border: var(--border);
+  box-shadow: var(--shadow);
+  background-color: white;
+  padding: 1rem;
+}
+
+.dialog-backdrop.open,
+.dialog-backdrop.open .dialog {
+  display: block;
+}
+
+.dialog h1 {
+  margin-bottom: 2rem;
+}
+
+.dialog .dialog-input {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.dialog .dialog-input p {
+  margin: 0;
+}
+
+.dialog .dialog-input input {
+  flex: 1;
+  max-width: 400px;
+}
+
+.dialog .dialog-button {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 768px) {
+  .dialog {
+    width: calc(100% - 4rem);
+  }
+}
